@@ -17,7 +17,11 @@ O resultado final pode ser explorado no dashboard interativo através do link ab
 
 ### 📱 Demonstração do Dashboard
 
-**Inserir imagem aqui**
+<p align="center">
+  <img src="./assets/view-1-visao-executiva-comercial.png" width="800" alt="Dashboard de Vendas - Visão Executiva e Comercial">
+  <img src="./assets/view-2-logistica-satisfacao.png" width="800" alt="Dashboard de Vendas Olist - Logística e Satisfação">
+  
+</p>
 
 ---
 
@@ -57,6 +61,7 @@ A missão principal foi consolidar um banco de dados relacional complexo e respo
 
 *   `/data`: Contém a base processada utilizada no BI.
 *   `/notebooks`: Notebook `.ipynb` com o código completo da análise.
+*   `/assets`: Imagens de visualização do Dashboard.
 *   `README.md`: Documentação e apresentação do projeto.
 
 ---
@@ -80,7 +85,34 @@ O Dashboard interativo é alimentado pelo arquivo CSV gerado na etapa anterior.
     *   Acesse o [Looker Studio](https://lookerstudio.google.com/), crie uma nova fonte de dados e selecione o conector do **Google Planilhas** ou **Upload de Arquivo**.
     *   Conecte o CSV e comece a explorar as métricas tratadas (Regiões e Fretes sem outliers).
 ---
+### 💡 Principais Insights de Negócio 
 
+A análise exploratória e a visualização dos dados no **Looker Studio** permitiram identificar padrões críticos que impactam a operação da Olist:
+
+1.  **Sazonalidade e Concentração de Mercado**:
+    *   **Pico de Vendas:** O volume de transações atinge seu ápice absoluto na **Black Friday**, gerando um faturamento total de **R$ 12,77 Milhões** no período analisado.
+    *   **Geografia do Consumo:** Existe uma forte concentração de pedidos no Sudeste (SP e MG), enquanto as regiões Norte e Nordeste enfrentam o "imposto da distância", com fretes médios de **R$ 19,23**, mas que em áreas remotas chegam a dobrar o valor em relação ao Sudeste.
+
+2.  **O Perfil do Consumidor e Ticket Médio**:
+    *   **Categorias Líderes:** O Top 10 é dominado por `cama_mesa_banho` e `beleza_saude`, indicando um consumo focado em utilidades domésticas e bem-estar.
+    *   **Economia de Volume:** Com um **Ticket Médio de R$ 133,18**, a plataforma depende de alto volume de vendas, já que a margem por produto individual é moderada.
+
+3.  **A Correlação Crítica: Atraso vs. Satisfação**:
+    *   **Sensibilidade ao Prazo:** A **Nota Média (4,08)** cai drasticamente de **4.0 para abaixo de 2.0** assim que o atraso ultrapassa 7 dias. 
+    *   **Taxa de Atraso:** Atualmente em **6,73%**. Embora pareça baixa, esses **6.455 pedidos atrasados** são os principais geradores de detratores (notas 1 e 2) na plataforma.
+
+---
+
+### 🚀 Recomendações Pragmáticas
+
+Com base nos dados extraídos, as seguintes ações são sugeridas para otimizar os resultados e a experiência do cliente:
+
+*   **📍 Descentralização Logística:** Incentivar a entrada de *Sellers* (vendedores) nas regiões Norte e Nordeste para reduzir o custo do "Last Mile" e aumentar a satisfação nessas localidades.
+*   **⚠️ Gestão de Alerta de Atrasos:** Implementar um sistema de gatilhos para o time de Suporte (CS) sempre que um pedido entrar no 3º dia de "atraso leve", evitando que ele evolua para um atraso crítico e gere uma avaliação negativa.
+*   **💳 Estratégia de Upselling:** Criar campanhas de frete grátis ou descontos progressivos para carrinhos acima de **R$ 150,00**, visando elevar o Ticket Médio atual (R$ 133,18) e diluir os custos logísticos.
+*   **📅 Planejamento de Demanda:** Reforçar a malha logística e o suporte 30 dias antes da Black Friday, dado que o aumento súbito de volume é o principal fator de estresse que gera atrasos subsequentes em dezembro.
+
+---
 ### 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
@@ -100,7 +132,11 @@ The final results can be explored in the interactive dashboard via the link belo
 
 ### 📱 Dashboard Preview
 
-**Inserir imagem aqui**
+<p align="center">
+  <img src="./assets/view-1-visao-executiva-comercial.png" width="800" alt="Sales Dashboard - Executive and Commercial Overview">
+  <img src="./assets/view-2-logistica-satisfacao.png" width="800" alt="Olist Sales Dashboard - Logistics and Customer Satisfaction">
+  
+</p>
 
 ---
 
@@ -140,6 +176,7 @@ The main mission was to consolidate a complex relational database and answer cri
 
 *   `/data`: Contains the processed base used in BI.
 *   `/notebooks`: `.ipynb` notebook with the full analysis code.
+*   `/assets`: Project screenshots and dashboard previews.
 *   `README.md`: Project documentation and presentation.
 
 ---
@@ -163,6 +200,19 @@ The interactive Dashboard is powered by the CSV file generated in the previous s
     *   Acess [Looker Studio](https://lookerstudio.google.com/), create a new data source, and select the **Google Sheets** or **File Upload connector**.
     *   Connect the CSV and start exploring the treated metrics (Regions and Freight without outliers).
 ---
+### Business Insights & Recommendations
+
+### 📊 Insights
+*   **Logistics & Geography:** Shipping costs in Northern Brazil are significantly higher, directly impacting customer satisfaction scores.
+*   **The Delay Threshold:** Data shows a sharp decline in review scores (from 4.0 to < 2.0) once a delivery delay exceeds 7 days.
+*   **Consumer Profile:** With an average ticket of **BRL 133.18**, success relies on high sales volume in categories like "Home & Bath" and "Health & Beauty".
+
+### 🚀 Recommendations
+*   **Regional Expansion:** Recruit local sellers in high-shipping-cost regions to reduce delivery times.
+*   **Proactive CS:** Implement automated alerts for orders with a 3-day delay to mitigate negative reviews.
+*   **Upselling Strategy:** Offer incentives for orders above BRL 150.00 to increase the average ticket and optimize margins.
+
+---
 
 ### 📄 License
 
@@ -175,4 +225,4 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 Hélen Ferreira – Developer  
 📸 [Linkedin](https://www.linkedin.com/in/helensjferreira-dev/)  
 💬 [WhatsApp](https://wa.me/5548988183720)  
-🔗 [GitHub](https://github.com/helensjferreira-dev/assistente-esportivo)  
+🔗 [GitHub](https://github.com/helensjferreira-dev/)  
